@@ -1,9 +1,3 @@
-//
-//  arabiiApp.swift
-//  arabii
-//
-//  Created by Haroon Awan on 30/10/2025.
-//
 
 import SwiftUI
 
@@ -11,7 +5,29 @@ import SwiftUI
 struct arabiiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
+    }
+}
+
+
+struct RootView: View {
+    @StateObject private var coordinator = Navigator()
+    
+    
+    var body: some View {
+        NavigationStack(path: $coordinator.path) {
+            SignIn()
+                .navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .signin:
+                        SignIn()
+                    case .completeProfile:
+                        CompleteProfile()
+                   
+                    }
+                }
+        }
+        .environmentObject(coordinator)
     }
 }
