@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AF113CFE2EC1F5F60036638C /* FormValidator in Frameworks */ = {isa = PBXBuildFile; productRef = AF113CFD2EC1F5F60036638C /* FormValidator */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AF974EFB2EB36C4F000B2F55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF113CFE2EC1F5F60036638C /* FormValidator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF113CFC2EC1F5F60036638C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF974EE32EB36C4D000B2F55 = {
 			isa = PBXGroup;
 			children = (
 				AF974EEE2EB36C4D000B2F55 /* arabii */,
 				AF974EFD2EB36C4F000B2F55 /* arabiiTests */,
 				AF974F072EB36C4F000B2F55 /* arabiiUITests */,
+				AF113CFC2EC1F5F60036638C /* Frameworks */,
 				AF974EED2EB36C4D000B2F55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +125,7 @@
 			);
 			name = arabii;
 			packageProductDependencies = (
+				AF113CFD2EC1F5F60036638C /* FormValidator */,
 			);
 			productName = arabii;
 			productReference = AF974EEC2EB36C4D000B2F55 /* arabii.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = AF974EE32EB36C4D000B2F55;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AF113CF62EC1F2AA0036638C /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AF974EED2EB36C4D000B2F55 /* Products */;
 			projectDirPath = "";
@@ -593,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF113CF62EC1F2AA0036638C /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Open-Bytes/SwiftUIFormValidator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF113CFD2EC1F5F60036638C /* FormValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF113CF62EC1F2AA0036638C /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */;
+			productName = FormValidator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF974EE42EB36C4D000B2F55 /* Project object */;
 }
